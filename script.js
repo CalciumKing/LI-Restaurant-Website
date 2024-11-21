@@ -1,7 +1,7 @@
 let navOpen = false;
 function toggleNav() {
     let sidebar = document.getElementById("sidebar");
-    if(!navOpen) {
+    if (!navOpen) {
         sidebar.style.width = "250px";
         navOpen = true;
     } else {

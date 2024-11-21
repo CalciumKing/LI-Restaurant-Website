@@ -1,34 +1,77 @@
+/* #region General */
 body {
-    background-color: #28282B;
+    margin: 0;
+    padding: 0;
 }
 
-.sidebar {
-    border-radius: 15px 0 15px 0;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #800000;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 5vh;
+h3 {
+    height: 5vh;
 }
 
-.sidebar a {
-    padding: 8px 8px 8px 32px;
+a {
+    position: relative;
     text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-}
-.sidebar a:hover {
-    color: #28282B;
+    transition: color .5s;
 }
 
-/*#Burger*/
+.black a {
+    color: white;
+}
+
+.white a {
+    color: black;
+}
+
+.right-arrow::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("images/arrow-right.svg") no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.left-arrow::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("images/arrow-left.svg") no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+a::after {
+    position: relative;
+    top: -.1em;
+    display: block;
+    content: '';
+    border-bottom: solid .2em #800000;
+    transform: scaleX(0);
+    transition: transform 1s;
+    transform-origin: bottom right;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a:hover {
+    color: #800000;
+}
+
+a:hover .right-arrow::after {
+    background: url(images/arrow-right-red.svg) no-repeat;
+}
+a:hover .left-arrow::before {
+    background: url(images/arrow-left-red.svg) no-repeat;
+}
+/* #endregion General */
+/* #region Burger */
 .burger {
     position: absolute;
     right: 5vw;
@@ -93,5 +136,100 @@ body {
     top: 28px;
     left: 5px;
 }
+/* #endregion Burger */
+/* #region Sidebar */
+#sidebar {
+    border-radius: 15px 0 15px 0;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    background-color: #800000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5vh;
+}
 
-/*#Burger*/
+#sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+#sidebar a:hover {
+    color: #28282B;
+}
+/* #endregion Sidebar */
+
+.black, .white {
+    height: 100vh;
+}
+
+.black {
+    background-image: url(images/background-designs/design2.png);
+    background-repeat: no-repeat;
+    background-color: #28282B;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.white {
+    background-image: url(images/background-designs/design3.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    color: black;
+}
+
+.divider {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 80%;
+    background: #fff5;
+    -webkit-mask: linear-gradient(90deg, #0000, #000, #0000);
+    backdrop-filter: blur(4px);
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+
+.left a, .right a {
+    position: relative;
+    top: 2em;
+    z-index: 999;
+}
+
+.left {
+    float: left;
+    margin-left: 8vw;
+    margin-top: 10vw;
+    width: 25vw;
+    height: 30vh;
+    padding: 10px;
+}
+
+.left img {
+    float: right;
+}
+
+.right {
+    float:right;
+    margin-right: 8vw;
+    margin-top: 10vw;
+    width: 25vw;
+    height: 30vh;
+    padding: 10px;
+}
+
+.right img {
+    float: left;
+}
