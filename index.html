@@ -13,33 +13,96 @@
                 <span></span>
                 <span></span>
             </label>
-            <div id="sidebar">
+            <section id="sidebar">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Menu</a>
                 <a href="#">Contact</a>
-            </div>
+            </section>
         </header>
         <main>
-            <div class="black">
+            <section class="black">
                 <div class="left">
                     <h1>Indulge in the Art of Meatcraft</h1>
                     <h3>Where every cut is a masterpiece, every flavor tells a story, and every meal is an experience worth savoring.</h3>
                     <a href="about.html">About Crimson Cut Steakhouse<span class="right-arrow"></span></a>
                 </div>
                 <img src="#" class="right">
-            </div>
-            <div class="divider"></div>
-            <div class="white">
-                <img src="#">
+            </section>
+            <section class="white">
+                <div class="divider"></div>
+                <img src="#" class="left">
                 <div class="right">
                     <h1>Crafted For Carnivores, Perfected For All</h1>
                     <h3>Explore a menu brimming with expertly prepared cuts, slow-roasted favorites, and bold, flame-grilled flavors. From tender steaks to savory smoked meats, every dish is a celebration of quality and tradition.</h3>
-                    <a href="#"><span class="left-arrow"></span>The Menu</a>
+                    <a href="menu.html"><span class="left-arrow"></span>The Menu</a>
                 </div>
-            </div>
+            </section>
+            <section class="black">
+                <div class="divider"></div>
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <img src="images/food/steak1.jpg">
+                        <p class="text">Rich, marbled, and bursting with bold, juicy flavors from our signature flame-grill.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food/hamburger1.jpg">
+                        <p class="text">Yummy burger</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food/filetMinion.jpg">
+                        <p class="text">A tender, buttery cut seared to perfection and finished with a touch of herb-infused butter.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food/brisket.jpg">
+                        <p class="text">Slow-smoked for hours to achieve a melt-in-your-mouth texture and deep, smoky flavor.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food/pork.jpg">
+                        <p class="text">Fall-off-the-bone tender, glazed with a tangy, house-made barbecue sauce.</p>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food/steak2.jpg">
+                        <p class="text">Another yummy steak.</p>
+                    </div>
+                    <a class="prev left" onclick="plusSlides(-1)">❮</a>
+                    <a class="next right" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="setSlide(1)"></span>
+                    <span class="dot" onclick="setSlide(2)"></span>
+                    <span class="dot" onclick="setSlide(3)"></span>
+                    <span class="dot" onclick="setSlide(4)"></span>
+                    <span class="dot" onclick="setSlide(5)"></span>
+                    <span class="dot" onclick="setSlide(6)"></span>
+                </div>
+            </section>
         </main>
         <footer>
+            <section class="white">
+                <div class="divider"></div>
+                <div class="row">
+                    <div clas="col">
+                        <h1>Contacts:</h1>
+                        <ul>
+                            <li>Phone: (555) 987-6543</li>
+                            <li>Email: info@ironwoodgrille.com</li>
+                            <li>Address: 1234 Flamecrest Drive, Oakwood, TX 78901</li>
+                        </ul>
+                    </div>
+                    <div clas="col">
+                        <h1>Socials:</h1>
+                        <ul>
+                            <li><span class="insta"></span>Instagram</li>
+                            <li><span class="twitter"></span>Twitter</li>
+                            <li><span class="facebook"></span>Facebook</li>
+                            <li><span class="tiktok"></span>TikTok</li>
+                            <li><span class="youtube"></span>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </footer>
     </body>
 </html>
