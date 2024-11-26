@@ -24,46 +24,7 @@ a {
     color: black;
 }
 
-.right-arrow::after {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url("images/logos/arrow-right.svg") no-repeat;
-    background-size: contain;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-
-.left-arrow::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url("images/logos/arrow-left.svg") no-repeat;
-    background-size: contain;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-footer span::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    /* background: url("images/logos/arrow-left.svg"); */
-    background-size: contain;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-/* #region Logos */
-.insta {
-    background: url("images/logos/insta.svg");
-}
-/* #endregion Logos */
-
-a::after {
+/* a::after {
     position: relative;
     top: -.1em;
     display: block;
@@ -72,23 +33,70 @@ a::after {
     transform: scaleX(0);
     transition: transform 1s;
     transform-origin: bottom right;
-}
+} */
 
-a:hover::after {
+/* a:not(.prev, .next):hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
+} */
 
 a:hover {
     color: #800000;
 }
 
-a:hover .right-arrow::after {
-    background: url(images/logos/arrow-right-red.svg) no-repeat;
+img:not(a>img) {
+    transform: scale(1);
+    transition: all .5s;
 }
 
-a:hover .left-arrow::before {
-    background: url(images/logos/arrow-left-red.svg) no-repeat;
+img:not(a>img):hover {
+    transform: scale(1.1);
+}
+
+a>img {
+    display: inline;
+    height: 1em;
+    padding: 0 .5em;
+    transform: translateY(.2em);
+}
+
+.white a:hover>img {
+    filter: invert(12%) sepia(33%) saturate(7499%) hue-rotate(2deg) brightness(94%) contrast(125%);
+}
+
+.black a:hover>img {
+    filter: brightness(0) saturate(100%) invert(9%) sepia(77%) saturate(3978%) hue-rotate(353deg) brightness(96%) contrast(116%);
+}
+
+#progressContainer {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 1vh;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+#progressBar {
+    display: block;
+    height: 100%;
+    background: maroon;
+    /* border-radius: 0 15px 15px 0; */
+}
+
+#toTopButton {
+    position: fixed;
+    right: 5vw;
+    bottom: 10vh;
+    background-color: transparent;
+    z-index: 999;
+}
+
+#toTopButton>img {
+    height: 8vh;
+    width: auto;
 }
 
 /* #endregion General */
@@ -188,7 +196,7 @@ a:hover .left-arrow::before {
 }
 
 /* #endregion Sidebar */
-
+/* #region Sections */
 .black,
 .white {
     height: 100vh;
@@ -240,18 +248,10 @@ a:hover .left-arrow::before {
     padding: 10px;
 }
 
-
-
-
-
-
-
-
-
+/* #endregion Sections */
+/* #region Slideshow */
 .slide {
     display: inline-block;
-    animation-name: fade;
-    animation-duration: 1.5s;
 }
 
 .slideshow-container {
@@ -273,11 +273,12 @@ a:hover .left-arrow::before {
     display: inline-block;
 }
 
-.slideshow-container img {
+.slideImage {
     display: inline-block;
     vertical-align: middle;
     width: 70%;
     aspect-ratio: 16/9;
+    border-radius: 15px;
 }
 
 .prev,
@@ -291,7 +292,6 @@ a:hover .left-arrow::before {
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
@@ -299,11 +299,6 @@ a:hover .left-arrow::before {
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .text {
@@ -314,13 +309,6 @@ a:hover .left-arrow::before {
     bottom: 8px;
     width: 100%;
     text-align: center;
-}
-
-.numbertext {
-    color: white;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: relative;
 }
 
 .dot {
@@ -341,14 +329,20 @@ a:hover .left-arrow::before {
     transform: scale(1.5);
 }
 
-@keyframes fade {
-    from {
-        opacity: .4;
-    }
+/* #endregion Slideshow */
 
-    to {
-        opacity: 1;
-    }
+footer>.white {
+    height: 50vh;
+    background-image: url(images/background-designs/design2.png);
 }
 
-/* #endregion */
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.row section {
+    display: inline-block;
+    font-size: 3vh;
+}

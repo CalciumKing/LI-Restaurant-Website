@@ -7,6 +7,12 @@
     </head>
     <body>
         <header>
+            <div id="progressContainer">
+                <span id="progressBar"></span>
+            </div>
+            <a id="toTopButton" href="#">
+                <img src="images/logos/toTopButton.png" alt="to top button">
+            </a>
             <label class="burger" for="burger">
                 <input type="checkbox" id="burger" onclick="toggleNav()">
                 <span></span>
@@ -16,7 +22,7 @@
             <section id="sidebar">
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="#">Menu</a>
+                <a href="#">Order Online/Menu</a>
                 <a href="#">Contact</a>
             </section>
         </header>
@@ -25,46 +31,49 @@
                 <div class="left">
                     <h1>Indulge in the Art of Meatcraft</h1>
                     <h3>Where every cut is a masterpiece, every flavor tells a story, and every meal is an experience worth savoring.</h3>
-                    <a href="about.html">About Crimson Cut Steakhouse<span class="right-arrow"></span></a>
+                    <a href="about.html">About Crimson Cut Steakhouse<img src="images/logos/arrow-right.svg" alt="arrow-right"></a>
                 </div>
-                <img src="#" class="right">
+                <img src="images/food/transparentSteak1.png" class="right" alt="image about meatcraft">
             </section>
             <section class="white">
                 <div class="divider"></div>
-                <img src="#" class="left">
+                <img src="images/food/transparentSteak2.png" class="left" alt="image about the menu">
                 <div class="right">
                     <h1>Crafted For Carnivores, Perfected For All</h1>
                     <h3>Explore a menu brimming with expertly prepared cuts, slow-roasted favorites, and bold, flame-grilled flavors. From tender steaks to savory smoked meats, every dish is a celebration of quality and tradition.</h3>
-                    <a href="menu.html"><span class="left-arrow"></span>The Menu</a>
+                    <a href="menu.html"><img src="images/logos/arrow-left.svg" alt="arrow-left">The Menu</a>
                 </div>
             </section>
             <section class="black">
                 <div class="divider"></div>
                 <div class="slideshow-container">
                     <div class="slide">
-                        <img src="images/food/steak1.jpg">
+                        <img src="images/food/steak1.jpg" alt="slideshow image of steak" class="slideImage">
                         <p class="text">Rich, marbled, and bursting with bold, juicy flavors from our signature flame-grill.</p>
                     </div>
                     <div class="slide">
-                        <img src="images/food/hamburger1.jpg">
+                        <img src="images/food/hamburger1.jpg" alt="slideshow image of hamburger" class="slideImage">
                         <p class="text">Yummy burger</p>
                     </div>
                     <div class="slide">
-                        <img src="images/food/filetMinion.jpg">
+                        <img src="images/food/filetMinion.jpg" alt="slideshow image of filet minion" class="slideImage">
                         <p class="text">A tender, buttery cut seared to perfection and finished with a touch of herb-infused butter.</p>
                     </div>
                     <div class="slide">
-                        <img src="images/food/brisket.jpg">
+                        <img src="images/food/brisket.jpg" alt="slideshow image of brisket" class="slideImage">
                         <p class="text">Slow-smoked for hours to achieve a melt-in-your-mouth texture and deep, smoky flavor.</p>
                     </div>
                     <div class="slide">
-                        <img src="images/food/pork.jpg">
+                        <img src="images/food/pork.jpg" alt="slideshow image of pork" class="slideImage">
                         <p class="text">Fall-off-the-bone tender, glazed with a tangy, house-made barbecue sauce.</p>
                     </div>
                     <div class="slide">
-                        <img src="images/food/steak2.jpg">
+                        <img src="images/food/steak2.jpg" alt="another slideshow image of steak" class="slideImage">
                         <p class="text">Another yummy steak.</p>
                     </div>
+                    <noscript>
+                        <h1>Your browser does not support javascript</h1>
+                    </noscript>
                     <a class="prev left" onclick="plusSlides(-1)">❮</a>
                     <a class="next right" onclick="plusSlides(1)">❯</a>
                 </div>
@@ -83,24 +92,34 @@
             <section class="white">
                 <div class="divider"></div>
                 <div class="row">
-                    <div clas="col">
+                    <section>
                         <h1>Contacts:</h1>
                         <ul>
                             <li>Phone: (555) 987-6543</li>
                             <li>Email: info@ironwoodgrille.com</li>
                             <li>Address: 1234 Flamecrest Drive, Oakwood, TX 78901</li>
                         </ul>
-                    </div>
-                    <div clas="col">
+                    </section>
+                    <section>
                         <h1>Socials:</h1>
                         <ul>
-                            <li><span class="insta"></span>Instagram</li>
-                            <li><span class="twitter"></span>Twitter</li>
-                            <li><span class="facebook"></span>Facebook</li>
-                            <li><span class="tiktok"></span>TikTok</li>
-                            <li><span class="youtube"></span>Youtube</li>
+                            <li>
+                                <a href="#"><img src="images/logos/insta.svg" alt="instagram logo">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/logos/twitter.svg" alt="twitter logo">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/logos/facebook.svg" alt="facebook logo">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/logos/tiktok.svg" alt="tiktok logo">TikTok</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/logos/youtube.svg" alt="youtube logo">Youtube</a>
+                            </li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </section>
         </footer>
