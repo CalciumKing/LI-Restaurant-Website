@@ -9,14 +9,14 @@ let navOpen = false;
 let slideIndex = 1;
 let timeoutID;
 
-!function() {
+!function () {
     window.addEventListener("scroll", () => {
         topButton.style.display = (window.scrollY > 0) ? "block" : "none";
         const getTabHeight = () => document.documentElement.scrollHeight - window.innerHeight;
         progressBar.style.width = `${(window.scrollY / getTabHeight()) * 100}%`;
     });
 
-    topButton.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
     for (const image of document.getElementsByClassName("slideImage")) {
         image.addEventListener("mouseover", () => clearTimeout(timeoutID));
