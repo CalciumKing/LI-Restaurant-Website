@@ -17,6 +17,7 @@ let timeoutID;
     });
 
     topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    topButton.style.display = "none";
 
     for (const image of document.getElementsByClassName("slideImage")) {
         image.addEventListener("mouseover", () => clearTimeout(timeoutID));
